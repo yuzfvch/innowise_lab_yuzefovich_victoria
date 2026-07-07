@@ -27,4 +27,5 @@ SELECT country_name,
 	RANK() OVER (PARTITION BY country_name ORDER BY total_sales_amount DESC) AS rank_in_country,
     SUM(total_sales_amount) OVER (PARTITION BY country_name ORDER BY total_sales_amount DESC ROWS UNBOUNDED PRECEDING) AS country_running_total
  FROM shop_aggregates 
- ORDER BY country_name, rank_in_country;
+ ORDER BY country_name, rank_in_country
+ LIMIT 22;

@@ -18,4 +18,5 @@ SELECT
     COALESCE(LAG(monthly_revenue) OVER (ORDER BY sale_month), 0) AS previous_month_revenue,
     monthly_revenue - COALESCE(LAG(monthly_revenue) OVER (ORDER BY sale_month), 0) AS revenue_diff_vs_previous
 FROM monthly_revenue
-ORDER BY sale_month;
+ORDER BY sale_month
+LIMIT 24;
