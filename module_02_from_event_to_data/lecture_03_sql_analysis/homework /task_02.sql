@@ -18,6 +18,10 @@ FROM
 JOIN 
 	products p ON s.product_id = p.product_id
 WHERE 
-	total_price > 1500 AND p."class"  = 'A'
+	total_price > 1500 AND p.class  = 'A'
 ORDER BY 
-	s.transaction_number;
+	s.transaction_number
+LIMIT 10;
+
+
+

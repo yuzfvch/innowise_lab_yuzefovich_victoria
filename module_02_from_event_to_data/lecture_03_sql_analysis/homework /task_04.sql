@@ -8,3 +8,4 @@ GROUP BY
 	product_name 
 HAVING SUM(s.total_price) > 400000.00
 ORDER BY SUM(s.total_price) DESC 
+LIMIT 10;
